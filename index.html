@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin-top: 0;
+            margin-left: 50%;
+            margin-right: 50%;
+        }
+        div {
+            border: 2px solid black;
+            width: 100px;
+            height: 29px;
+            margin-top: 3px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        button{
+           
+            width: 100px;
+            height: 29px;
+            margin-top: 1px;
+        }
+    </style>
+</head>
+<body>
+    <div class="name">1st child</div>
+    <div class="name">2st child</div>
+    <div class="name">3st child</div>
+    <div class="name">4st child</div>
+    <div class="name">5st child</div>
+    <div class="name">6st child</div> 
+    <div class="name">7st child</div>
+    <div class="name">8st child</div>
+    <div class="name">9st child</div>
+    <div class="name">10st child</div>
+    <div class="name">11st child</div>
+    <div class="name">12st child</div>
+    <div class="name">13st child</div>
+    <div class="name">14st child</div>
+    <div class="name">15st child</div>
+    <div class="name">16st child</div>
+    <div class="name">17st child</div>
+    <button onclick="hello()">click here</button>
+    <script>
+        function hello(){
+            const temp = document.getElementsByClassName("name")
+            console.log(temp[temp.length-1]);
+            temp[0].setAttribute("style" , "background-color:blue")
+            temp[8].setAttribute("style" , "background-color:green")
+            temp[temp.length-1].setAttribute("style" , "background-color:PaleVioletRed")
+            
+
+            for(let i=0;i<temp.length;i++){
+                if(i%2==1){
+                    temp[i].setAttribute("style" , "background-color:lime")
+                }
+            }
+        }
+        
+    </script>
+   
+
+</body>
+</html>
